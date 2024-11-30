@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Indu Digital Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+header {
+    background: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000;
+}
+
+.menu-toggle .line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animated Toggle Transform */
+.menu-toggle.open .line:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.menu-toggle.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        height: 100%;
+        width: 250px;
+        padding-top: 80px;
+        align-items: center;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    
+     color:black;
+    padding: 100px 20px;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ff5733;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-item {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    color: #ff5733;
+}
+
+.service-item p {
+    color: #666;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sticky Button */
+.sticky-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.sticky-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+}
+/* Vision Section */
+.vision {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.vision h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vision-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+}
+
+.vision-points {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 30px;
+}
+
+.vision-item {
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
+.vision-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.vision-item p {
+    color: #666;
+    margin: 10px 0 0;
+}
+
+   /* Hero Section */
+.parallax {
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.parallax h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-style:italic;
+    font-weight:bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: #ff7843;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.testimonial-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    text-align: center;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testimonial-controls button {
+    background: none;
+    border: 2px solid #333;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.testimonial-controls button:hover {
+    background: #333;
+    color: white;
+}
+
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+
+    .slide-text {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 250px;
+    }
+
+    .slide-text {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+  /* Hero Section */
+.parallax {
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.parallax h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: #ff7843;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    text-align: center;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testimonial-controls button {
+    background: none;
+    border: 2px solid #333;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.testimonial-controls button:hover {
+    background: #333;
+    color: white;
+}
+/* Call to Action */
+.call-to-action {
+    padding: 40px 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+.call-to-action p {
+    margin-bottom: 20px;
+}
+/* Hero Section with Video */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: relative;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.faq h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.faq-item {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #0056b3;
+}
+
+.arrow {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    color: #333;
+    padding: 0 15px;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+}
+ 
+/* Open FAQ styling */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 15px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(45deg);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .faq h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .arrow {
+        font-size: 1rem;
+    }
+}
+
+
+
+  /* Flower Gallery */
+.flower-gallery {
+    padding: 50px 20px;
+}
+
+.flower-gallery h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Flower Container */
+.flower-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.flower-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.flower {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0.9) saturate(0.8);
+}
+
+/* Bloom Effect */
+.flower-item:hover .flower,
+.flower-item.bloom .flower {
+    transform: scale(1.2);
+    filter: brightness(1.2) saturate(1.5);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flower-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .flower-item {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flower-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .flower-item {
+        width: 100px;
+        height: 100px;
+    }
+}
+.flower {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.petal {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff6bcb;
+  border-radius: 50%;
+  transform-origin: bottom center;
+  animation: bloom 2s infinite ease-in-out;
+}
+
+.petal-1 {
+  transform: rotate(0deg) translateY(-50%);
+}
+
+.petal-2 {
+  transform: rotate(90deg) translateY(-50%);
+}
+
+.petal-3 {
+  transform: rotate(180deg) translateY(-50%);
+}
+
+.petal-4 {
+  transform: rotate(270deg) translateY(-50%);
+}
+.center {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: 10;
+  animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes bloom {
+  0%, 100% {
+    transform: scale(0.8) rotate(var(--angle));
+  }
+  50% {
+    transform: scale(1.1) rotate(var(--angle));
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsiveness */
+    @media (max-width: 768px) {
+  .petal {
+    width: 80px;
+    height: 80px;
+  }
+  .center {
+    width: 40px;
+    height:40px;
+}
+}
+ 
+/* Sunrise Container */
+.sunrise-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sky */
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(to top, #2c3e50, #1c2833); /* Nighttime gradient */
+    transition: background 3s linear;
+    z-index: 1;
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    bottom: -100px; /* Starts below the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffcc33, #ff9933);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 50px 20px rgba(255, 200, 0, 0.6);
+}
+
+/* Ground */
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: #0b3d91;
+    z-index: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sun {
+        width: 90px;
+        height: 90px;
+    }
+
+    .ground {
+        height: 30%;
+    }
+}
+* Bus Container */
+.bus-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Bus */
+.bus {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    animation: bus-move 6s linear infinite;
+}
+
+/* Bus Body */
+.bus-body {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 260px;
+    height: 80px;
+    background-color: #ffd700;
+    border-radius: 5px;
+}
+
+/* Windows */
+.window {
+    position: absolute;
+    top: 30px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+.window1 {
+    left: 30px;
+}
+
+.window2 {
+    left: 110px;
+}
+
+.window3 {
+    left: 190px;
+}
+
+/* Wheels */
+.wheel {
+    position: absolute;
+    bottom: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    animation: wheel-spin 1s linear infinite;
+}
+
+.front-wheel {
+    left: 240px;
+}
+
+.back-wheel {
+    left: 40px;
+}
+
+/* Animations */
+@keyframes bus-move {
+    0% {
+        transform: translateX(-350px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes wheel-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bus {
+        width: 250px;
+        height: 125px;
+    }
+
+    .bus-body {
+        width: 210px;
+        height: 70px;
+    }
+
+    .window {
+        width: 50px;
+        height: 35px;
+    }
+
+    .wheel {
+        width: 30px;
+        height: 30px;
+    }
+
+    .front-wheel {
+        left: 200px;
+    }
+
+    .back-wheel {
+        left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bus {
+        width: 200px;
+        height: 100px;
+    }
+
+    .bus-body {
+        width: 170px;
+        height: 60px;
+    }
+
+    .window {
+        width: 40px;
+        height: 30px;
+    }
+
+    .wheel {
+        width: 25px;
+        height: 25px;
+    }
+
+    .front-wheel {
+        left: 160px;
+    }
+
+    .back-wheel {
+        left: 20px;
+    }
+}
+/* Since Section */
+.since-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+}
+
+.since-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.since-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Achievements Row */
+.since-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.achievement {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.achievement h2 {
+    font-size: 2.5rem;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.achievement p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Awards Gallery */
+.awards-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.award-card {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.award-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.award-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .since-header h1 {
+        font-size: 2rem;
+    }
+
+    .since-header p {
+        font-size: 1rem;
+    }
+
+    .achievement h2 {
+        font-size: 2rem;
+    }
+
+    .achievement p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .since-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .since-header p {
+        font-size: 0.9rem;
+    }
+
+    .achievement h2 {
+        font-size: 1.8rem;
+    }
+
+    .achievement p {
+        font-size: 0.8rem;
+    }
+
+    .award-card img {
+        width: 60px;
+        height: 60px;
+    }
+}
+/* Testimonials Section */
+.testimonials-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e8f5ff, #ffffff);
+    text-align: center;
+}
+
+.testimonials-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 40px 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.facebook-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #002fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+     
+}
+
+.facebook-button:hover {
+    background: #2200ff;
+    transform: scale(1.05);
+}
+.instagram-button{
+    display:inline-block;
+    padding:12px 30px;
+    background:#E1306C;
+    color:#fff;
+    text-decoration:none;
+    font-size:1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+.instagram-buton:hover {
+    background: #E1306C;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-section h1,
+    .cta-section h1 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-section h1,
+    .cta-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+/* Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?photography') no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero .btn:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.reason-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+}
+
+.reason-card .icon {
+    margin-bottom: 20px;
+}
+
+.reason-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.reason-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.reason-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .reason-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .reason-card p {
+        font-size: 0.95rem;
+    }
+}
+/* Common Sticky Button Styles */
+.sticky-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content:  left;
+    z-index: 9999;
+}
+
+.sticky-btn {
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sticky-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Sticky Buttons */
+.top-sticky {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    justify-content: left;
+}
+
+/* Bottom Sticky Buttons */
+.bottom-sticky {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    background-color: #007bff;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.scroll-top:hover {
+    background-color: #0056b3;
+    justify-content: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sticky-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .scroll-top {
+        font-size: 1.2rem;
+    }
+}
+.clickable {
+    transition: transform 0.1s ease-in-out;
+}
+
+.clickable:active {
+    transform: scale(0.95);
+}
+
+.confetti-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: randomColor();
+    opacity: 0.8;
+    animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+    from {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+ /* Curtain Container */
+.curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+}
+
+/* Left Curtain */
+.curtain-left {
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+    animation: slideLeft 2s forwards;
+}
+
+/* Right Curtain */
+.curtain-right {
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+    animation: slideRight 2s forwards;
+}
+
+/* Curtain Animation */
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+.hero {
+    color:black;
+}
+ 
+    </style>
+</head>
+<body>
+    
+      
+
+    <header>
+        <audio id="navClickSound" src="    https://res.cloudinary.com/dbnx1enhn/video/upload/v1732182775/indu_digital_stuido_d1ultl.mp3" preload="auto"></audio>
+        <nav class="navbar">
+            <div class="logo"> Indhu Digital Studio</div>
+            <button class="menu-toggle clickable" id="menuToggle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+            <ul class="nav-links clickable" id="navLinks">
+                <li><a href="#home" class="clickable">Home</a></li>
+                <li><a href="#about" class="clickable">About Us</a></li>
+                <li><a href="#services" class="clickable">Services</a></li>
+                 
+                <li><a href="#contact" class="clickable">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+     <!-- Sticky Buttons on Top -->
+<div class="sticky-buttons top-sticky">
+    
+
+    <a href="#contact" class="sticky-btn contact-us">IDS</a>
+</div>
+ 
+<!-- Sticky Buttons at Bottom -->
+<div class="sticky-buttons bottom-sticky">
+   
+     
+    <button class="sticky-btn scroll-top" id="scrollTop">↑</button>
+</div>
+
+<div class="sunrise-container">
+    <div class="sky">
+        <div class="sun"></div>
+    </div>
+    <div class="ground"></div>
+</div>
+    
+     
+    
+     
+     <!-- Hero Section with Background Video -->
+     <section class="video-section">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src=" https://res.cloudinary.com/dbnx1enhn/video/upload/v1732086384/video_20221024_221227_edit_qsln1a.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Capture Every Moment</h1>
+            <button class="cta-btn"> Indu Digital Studio</button>
+        </div>
+    </section>
+      
+      
+  
+    
+    <section id="home" class="hero" >
+        <h1>Welcome to Indhu Digital Studio</h1  > 
+        <p>Capturing the beauty of life, one click at a time. </p>
+    </section>
+     
+    <section class="flower-gallery">
+        <h2> Captured Blooming Flowers</h2>
+        <div class="flower-container">
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/1407310976/photo/full-frame-image-of-tropical-pink-and-white-bougainvillea-flower-bracts-growing-in-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=mCul5XFDEENlH-veHhwZ_N7eUHTXxiM8_EQLSwmui-c=" alt="Flower 1" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/171272238/photo/calendula.webp?a=1&b=1&s=612x612&w=0&k=20&c=C_Rb3vUa9_W58KJ2U-l-UBhHI0H3C6kl1G-iJ6QAKuw=" alt="Flower 2" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/171158318/photo/herb-and-flower-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=rn6ebk184rlFW-Cmm1rWobrpcBHIPoha8GFE9Pm4fDY=" alt="Flower 3" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/464194749/photo/tulip-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=d2f2iX_pncJJCBd9QjR1aFvHdP_b7c1FTgIjhlB9MX0=" alt="Flower 4" class="flower">
+            </div>
+            <div class="flower-item">
+                 
+                    <img src="  https://media.istockphoto.com/id/2111424340/photo/orange-gerbera-flower-head-macro-top-view.jpg?s=1024x1024&w=is&k=20&c=bI_KOI2yzxVD8r9CILC9v1aCmI5VatA-aoVLR7xqsQU=" alt="Flower 4" class="flower">
+                 
+            </div>
+            <div>
+                <div class="flower-item"> 
+                    <img src="https://media.istockphoto.com/id/2092283100/photo/pink-gerbera-flower-head-macro-top-view.jpg?s=612x612&w=0&k=20&c=WQ43uiGUJlVwyPDUg3cl_bB9A-_swDk_vK0FoSr_CFY=" alt="flower-5" class="flower">
+
+                </div>
+            </div>
+            
+       
+          
+    </section>
+    <div class="flower-container">
+        <div class="flower">
+          <div class="petal petal-1"></div>
+          <div class="petal petal-2"></div>
+          <div class="petal petal-3"></div>
+          <div class="petal petal-4"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+    
+
+    <section id="gallery" class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661389748409-0a8f74602f34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGhvdG8lMjBncmFwaHklMjBzdHVkaW9zJTIwc2hvcCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Landscape 1"></div>
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661411360156-3834fcb8ecba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Landscape 2"></div>
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661645458850-a4b25b59f8a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Portrait 1"></div>
+            <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1682145930966-712ce7177919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Portrait 2"></div>
+        </div>
+    </section>
+     
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src=" https://res-console.cloudinary.com/dbnx1enhn/media_explorer_thumbnails/2bfa0d866ba504a6ba4f3b84800ad79f/detailed" height="500" width="320">
+        <p>  
+           My Passion for Photography: A Personal Journey <hr><br>
+            
+            My name is Rajesh, and I discovered my passion for photography at a young age, captivated by the beauty of the world around me. I invested in advanced equipment to refine my skills, dedicating countless hours to mastering the technical aspects of photography. I explored various genres, including portraits, landscapes, street photography, and macro photography, each offering unique challenges and opportunities for growth.
+            
+            As I delved deeper into photography, I realized that capturing compelling stories through my photos was what truly resonated with me. I believe that every photograph has a narrative, and I strive to create images that connect with people on an emotional level. Through my lens, I aim to capture the essence of moments and emotions, telling stories that leave a lasting impact.
+            
+            To share my knowledge and inspire others, I conduct workshops and write blog posts, helping a community of photography enthusiasts pursue their creative journeys. I often travel to seek new perspectives and experiences, constantly challenging myself to improve and discover new facets of the art form.
+            
+            Photography is a lifelong journey for me, driven by discovery, creativity, and a deep love for capturing the beauty of life. Every shot I take reflects my dedication to the craft, showcasing my keen eye for detail and understanding of visual storytelling. Through my work, I create lasting memories and impactful stories that resonate with viewers, pushing the boundaries of what is possible in photography.
+            
+            ---
+            
+               😊</p>
+    </section>
+    
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Wedding Photography</h3>
+                <img src="https://media.istockphoto.com/id/866987706/photo/indian-wedding-hands.webp?a=1&b=1&s=612x612&w=0&k=20&c=aSL4uDc6-GtBj6j4-mEyISrN6mBo_Ryz2oXMk2XRVTw=" height="200" width="200">
+                <p>Capture the magic of your big day with stunning wedding photography tailored to your style.</p>
+            </div>
+            <div class="service-item">
+                <h3>Portrait Photography</h3>
+                <img src="https://media.istockphoto.com/id/486237421/photo/beautiful-lion-caesar-in-the-golden-grass-of-masai-mara.jpg?s=612x612&w=0&k=20&c=g-ioUkP2_Rft_RDzSmV8oLi-dJSQwdA-I_qpR9Eo37Y=" height="200" width="200">
+                <p>Professional portraits that highlight your unique personality and style.</p>
+            </div>
+            <div class="service-item">
+                <h3>Event Photography</h3>
+                <img src=" https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q=" height="200" width="200">
+                <p>Memorable moments from your events, captured with precision and creativity.</p>
+            </div>
+            <div class="service-item">
+                <h3>Product Photography</h3>
+                <img src="https://images.unsplash.com/photo-1530745342582-0795f23ec976?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D " height="200" width="200">
+                <p>High-quality images that showcase your products and boost your brand presence.</p>
+            </div>
+        </div>
+    </section>
+     <!-- Vision Section -->
+     <section id="vision" class="vision">
+        <h2>Our Vision</h2>
+        <p class="vision-desc">At Indu Digital Studio, our vision is to redefine storytelling through the art of photography, creating timeless memories for every moment we capture.</p>
+        <div class="vision-points">
+            <div class="vision-item">
+                <div class="icon">🌍</div>
+                <h3>Global Impact</h3>
+                <p>Bringing people closer together by capturing the shared beauty of our world.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">🎨</div>
+                <h3>Creative Excellence</h3>
+                <p>Continuously innovating to deliver unique, breathtaking visuals.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">❤️</div>
+                <h3>Emotional Connection</h3>
+                <p>Evoking feelings and memories through every photo we take.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">📷</div>
+                <h3>Technical Mastery</h3>
+                <p>Combining technical expertise with artistic vision for the perfect shot.</p>
+            </div>
+        </div>
+ <!-- Since Section -->
+ <section class="since-section">
+    <div class="since-header">
+        <h1>Since 10 Years in the Photography Industry</h1>
+        <p>We’ve been crafting breathtaking moments and have received multiple accolades for our exceptional work.</p>
+    </div>
+    <div class="since-content">
+        <div class="achievement">
+            <h2>10+</h2>
+            <p>Years of Experience</p>
+        </div>
+        <div class="achievement">
+            <h2>50+</h2>
+            <p>Prestigious Awards</p>
+        </div>
+        <div class="achievement">
+            <h2>500+</h2>
+            <p>Happy Clients</p>
+        </div>
+    </div>
+    <div class="awards-gallery">
+        <h2>Our Awards</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/955087966/photo/winner-trophy-on-sky-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=1E1R10_4csf0-2sx3Gr6OXDEg-xCGgu8Z1C51hTBSQc=" alt="Award 1">
+                <p>Best Photography Studio 2022</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/2062707084/photo/gold-star-as-a-reward-top-performance-award-winner-certificate-first-place-in-a-computer-game.webp?a=1&b=1&s=612x612&w=0&k=20&c=QV7NzFH2bIU5vpfE7ryw9TJnrbmkfWTEPXOzZ5EzhXQ=" alt="Award 2">
+                <p>Top Wedding Photographer 2021</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/1425117333/photo/badge-star-icon-on-dark-background-3d-render-concept-for-premium.jpg?s=612x612&w=0&k=20&c=ZHHQrMeuKMNvOHvEcJd3-4qKypap3qbzXeLA7AcCnqw=" alt="Award 3">
+                <p>Creative Excellence Award 2020</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/1046383974/photo/hand-holding-winner-trophy.jpg?s=612x612&w=0&k=20&c=hTYlmx6G5KgMtGhLKvRuLQHdO7rC0ZqIOFjs0uFvU9U=" alt="Award 4">
+                <p>Best Nature Photography 2019</p>
+            </div>
+        </div>
+    </div>
+</section>
+    </section>
+     <!-- Testimonials Section -->
+     <section class="testimonials-section">
+        <h1>What Our Clients Say</h1>
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <p>"The team was absolutely amazing! They captured every precious moment of our special day with incredible skill."</p>
+                <h3>– Sarah Johnson</h3>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <p>"Their attention to detail is unmatched. They truly bring creativity to every project they touch."</p>
+                <h3>– Michael Lee</h3>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <p>"From start to finish, the experience was wonderful. Highly recommended for anyone looking for top-notch photography."</p>
+                <h3>– Emily Clark</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h1>Ready to Capture Your Special Moments?</h1>
+        <p>Get in touch with us today to book a session or learn more about our services. Let us help you tell your story through breathtaking photography.</p>
+        <a href=" https://www.facebook.com/share/17YGChp9fQ/" class="cta-button">Contact Us</a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- Bus Container -->
+    <div class="bus-container">
+        <div class="bus">
+            <div class="bus-body"></div>
+            <div class="window window1"></div>
+            <div class="window window2"></div>
+            <div class="window window3"></div>
+            <div class="wheel front-wheel"></div>
+            <div class="wheel back-wheel"></div>
+        </div>
+    </div>
+         <br>
+         <br>
+         <br>
+         <br>
+         <section id="why-choose-us" class="why-choose-us">
+            <h2>Indhu Digital Studio</h2>
+            <div class="reasons-container">
+                <!-- Experienced Photographers -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/camera.png" alt="Expert Team">
+                    </div>
+                    <h3>Experienced Photographers</h3>
+                    <p>Our photographers have over a decade of experience in capturing every detail, from weddings to corporate events.</p>
+                </div>
+                 
+                 <!-- High-Quality Work -->
+            
+             <!-- Advanced Equipment -->
+             <div class="reason-card">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/64/000000/slr-camera.png" alt="Advanced Equipment">
+                </div>
+                <h3>Advanced Equipment</h3>
+                <p>We use state-of-the-art cameras, lenses, and lighting setups to achieve the perfect shot every time.</p>
+            </div>
+             <!-- Award-Winning Work -->
+              <!-- Versatile Expertise -->
+            <div class="reason-card">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/64/000000/image.png" alt="Versatile Expertise">
+                </div>
+                <h3>Versatile Expertise</h3>
+                <p>Whether it’s a wedding, event, or corporate shoot, our team is experienced in all areas of photography.</p>
+            </div>
+                 
+                <!-- Fast Delivery -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="Fast Delivery">
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We ensure timely delivery of your edited photos and albums without compromising on quality.</p>
+                </div>
+                <!-- Client Support -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="Client Support">
+                    </div>
+                    <h3>Unmatched Client Support</h3>
+                    <p>Our dedicated team is available to assist you at every step, from booking to the final delivery.</p>
+                </div>
+            </div>
+        </section>
+        
+ 
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <!-- Call to Action -->
+    <section class="call-to-action">
+        <h2>Sign Up for Our Newsletter</h2>
+        <p>Stay updated with our latest events and offers!</p>
+        
+        <a href="https://www.facebook.com/share/17YGChp9fQ/">
+        <button class="facebook-button">facebook</button>
+        </a>
+    
+        <a href="https://www.instagram.com/indhu_digital_?igsh=MW13bnZjcG5qMW5pYg=="> 
+        <button class="instagram-button"> Instagram</button>
+        </a>
+
+    </section>
+     <!-- FAQ Section -->
+     <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">What services do you offer?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>We offer portrait photography, event coverage, product shoots, and more. Our team ensures professional quality and attention to detail for every project.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I book a session?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>You can book a session by clicking the 'Book Now' button or contacting us directly via email or phone.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do you provide editing services?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>Yes, all our photography packages include professional editing and retouching to ensure the highest quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024  Indhu Digital Studio. All Rights Reserved.</p>
+    </footer>
+
+     
+    <div class="confetti-wrapper" id="confettiWrapper"></div>
+    <div class="curtain">
+        <div class="curtain-left"></div>
+        <div class="curtain-right"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
