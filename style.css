@@ -5,6 +5,9 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f9f9f9;
+    user-select:none;
+-webkit-user-select:none;
+pointer-events:none;
 }
 header {
     background: #333;
@@ -1784,3 +1787,16 @@ blockquote{
         height: 900px; /* Adjust height for smaller screens */
     }
 }
+#watermark{
+    position:fixed;
+    top:50px;
+    left:50px;
+    transform: translate(-50%, -50%);
+    font-size:50px;
+    color: rgba(0, 0, 0 , 0.1);
+    pointer-events:none;/* does't block interactions */
+    z-index: 9999;
+}
+
+
+
