@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+     style-src 'self' https://fonts.googleapis.com;
+     font-src https://fonts.gstatic.com;
+     media-src 'self' https://res.cloudinary.com;
+     img-src    'self' https://media.istockphoto.com https://images.unsplash.com https://plus.unsplash.com https://source.unsplash.com  https://img.icons8.com;
+     script-src 'self' https://cdn.jsdelivr.net; require-trusted-types-for 'script';
+    connect-src 'self'; 
+    object-src 'none'; 
+    upgrade-insecure-requests; 
+    block-all-mixed-content;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Clear-Site-Data" content="cookies, storage, executionContexts">
+    <title> Indu Digital Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+   
+</head>
+<body>
+    
+    
+      
+
+    <header>
+        <audio id="navClickSound" src="https://res.cloudinary.com/dbnx1enhn/video/upload/v1732182775/indu_digital_stuido_d1ultl.mp3" preload="auto"></audio>
+        <nav class="navbar">
+            <div class="logo"> Indhu Digital Studio</div>
+            <button class="menu-toggle clickable" id="menuToggle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+            <ul class="nav-links clickable" id="navLinks">
+                <li><a href="#home" class="clickable">Home</a></li>
+                <li><a href="#about" class="clickable">About Us</a></li>
+                <li><a href="#services" class="clickable">Services</a></li>
+                <li><a href="#contact" class="clickable">Contact</a></li>
+                <li><a href="#sub-services" class="clickable">Sub Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+     <!-- Sticky Buttons on Top -->
+<div class="sticky-buttons top-sticky">
+    
+
+    <a href="#contact" class="sticky-btn contact-us"><img src="images/WhatsApp Image 2024-11-30 at 21.53.17_dec7d3c6.jpg " height="30" width="30"></a>
+</div>
+ 
+<!-- Sticky Buttons at Bottom -->
+<div class="sticky-buttons bottom-sticky">
+   
+     
+    <button class="sticky-btn scroll-top" id="scrollTop">↑</button>
+</div>
+
+<div class="sunrise-container">
+    <div class="sky">
+        <div class="sun"></div>
+    </div>
+    <div class="ground"></div>
+</div>
+    
+     
+    <!-- Background Music (Autoplay, Loop, Muted) -->
+    <audio id="background-music" autoplay loop muted>
+        <source src=" cloudinary.v2.api
+        .resource_by_asset_id('827a3a3841a82aad156ff2c3e2c95c19')
+        .then(console.log)" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+     
+     <!-- Hero Section with Background Video -->
+     <section class="video-section">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src=" https://res.cloudinary.com/dbnx1enhn/video/upload/v1732086384/video_20221024_221227_edit_qsln1a.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Capture Every Moment</h1>
+            <button class="cta-btn"> Indhu Digital Studio</button>
+        </div>
+    </section>
+
+      
+      
+  
+    
+    <section id="home" class="hero" >
+        <h1>Welcome to Indhu Digital Studio</h1  > 
+        <p>Capturing the beauty of life, one click at a time. </p>
+    </section>
+     
+         
+
+<blockquote><i>&ldquo;ఈ కార్యక్రమాలలో తీసిన ఫోటోలు మరియు వ్యక్తిగత వివరాలు ఎప్పుడూ ఇతరులతో పంచుకోబడవు. మీ గోప్యత మా ప్రాధాన్యం.&rdquo;<br><hr> 
+
+ 
+
+    &ldquo;Photos and personal details taken during these events will never be shared with others. Your privacy is our priority.&rdquo;<br><hr></i>
+     </blockquote>
+      
+     <div class="slider-container">
+        <h1>Captured by Indhu Digital Studio</h1>
+        <div class="slider">
+            <img src="images/DSC07035 copy.JPG" alt="images by IDS">
+            <img src="images/DSC07119 copy.JPG" alt="images by IDS">
+            <img src="images/DSC07249 copy.JPG" alt="images by IDS">
+            <img src="images/DSC07474 copy.JPG" alt="images by IDS">
+            <img src="images/DSC07478 copy.JPG" alt="images by IDS">
+            <img src="images/DSC07509 copy.JPG" alt="images by IDS">
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+     </div>
+    <section class="flower-gallery">
+        <h2> Captured Blooming Flowers</h2>
+        <div class="flower-container">
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/1407310976/photo/full-frame-image-of-tropical-pink-and-white-bougainvillea-flower-bracts-growing-in-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=mCul5XFDEENlH-veHhwZ_N7eUHTXxiM8_EQLSwmui-c=" alt="Flower 1" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/171272238/photo/calendula.webp?a=1&b=1&s=612x612&w=0&k=20&c=C_Rb3vUa9_W58KJ2U-l-UBhHI0H3C6kl1G-iJ6QAKuw=" alt="Flower 2" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/171158318/photo/herb-and-flower-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=rn6ebk184rlFW-Cmm1rWobrpcBHIPoha8GFE9Pm4fDY=" alt="Flower 3" class="flower">
+            </div>
+            <div class="flower-item">
+                <img src=" https://media.istockphoto.com/id/464194749/photo/tulip-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=d2f2iX_pncJJCBd9QjR1aFvHdP_b7c1FTgIjhlB9MX0=" alt="Flower 4" class="flower">
+            </div>
+            <div class="flower-item">
+                 
+                    <img src="  https://media.istockphoto.com/id/2111424340/photo/orange-gerbera-flower-head-macro-top-view.jpg?s=1024x1024&w=is&k=20&c=bI_KOI2yzxVD8r9CILC9v1aCmI5VatA-aoVLR7xqsQU=" alt="Flower 4" class="flower">
+                 
+            </div>
+            <div>
+                <div class="flower-item"> 
+                    <img src="https://media.istockphoto.com/id/2092283100/photo/pink-gerbera-flower-head-macro-top-view.jpg?s=612x612&w=0&k=20&c=WQ43uiGUJlVwyPDUg3cl_bB9A-_swDk_vK0FoSr_CFY=" alt="flower-5" class="flower">
+
+                </div>
+            </div>
+            
+       
+          
+    </section>
+    <div class="flower-container">
+        <div class="flower">
+          <div class="petal petal-1"></div>
+          <div class="petal petal-2"></div>
+          <div class="petal petal-3"></div>
+          <div class="petal petal-4"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+    
+
+    <section id="gallery" class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661389748409-0a8f74602f34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGhvdG8lMjBncmFwaHklMjBzdHVkaW9zJTIwc2hvcCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Landscape 1"></div>
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661411360156-3834fcb8ecba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Landscape 2"></div>
+            <div class="gallery-item"><img src=" https://plus.unsplash.com/premium_photo-1661645458850-a4b25b59f8a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Portrait 1"></div>
+            <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1682145930966-712ce7177919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBob3RvJTIwZ3JhcGh5JTIwc3R1ZGlvcyUyMHNob3AlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Portrait 2"></div>
+        </div>
+    </section>
+     
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="images/WhatsApp Image 2024-11-30 at 21.56.42_bc467519.jpg" height="500" width="320" title="Rajesh">
+        <p>  
+           My Passion for Photography: A Personal Journey <hr><br>
+            
+            My name is Rajesh, and I discovered my passion for photography at a young age, captivated by the beauty of the world around me. I invested in advanced equipment to refine my skills, dedicating countless hours to mastering the technical aspects of photography. I explored various genres, including portraits, landscapes, street photography, and macro photography, each offering unique challenges and opportunities for growth.
+            
+            As I delved deeper into photography, I realized that capturing compelling stories through my photos was what truly resonated with me. I believe that every photograph has a narrative, and I strive to create images that connect with people on an emotional level. Through my lens, I aim to capture the essence of moments and emotions, telling stories that leave a lasting impact.
+            
+            To share my knowledge and inspire others, I conduct workshops and write blog posts, helping a community of photography enthusiasts pursue their creative journeys. I often travel to seek new perspectives and experiences, constantly challenging myself to improve and discover new facets of the art form.
+            
+            Photography is a lifelong journey for me, driven by discovery, creativity, and a deep love for capturing the beauty of life. Every shot I take reflects my dedication to the craft, showcasing my keen eye for detail and understanding of visual storytelling. Through my work, I create lasting memories and impactful stories that resonate with viewers, pushing the boundaries of what is possible in photography.
+            
+            ---
+            
+               😊</p>
+    </section>
+    
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Wedding Photography</h3>
+                <img src="https://media.istockphoto.com/id/866987706/photo/indian-wedding-hands.webp?a=1&b=1&s=612x612&w=0&k=20&c=aSL4uDc6-GtBj6j4-mEyISrN6mBo_Ryz2oXMk2XRVTw=" height="200" width="200">
+                <p>Capture the magic of your big day with stunning wedding photography tailored to your style.</p>
+            </div>
+            <div class="service-item">
+                <h3>Portrait Photography</h3>
+                <img src="https://media.istockphoto.com/id/486237421/photo/beautiful-lion-caesar-in-the-golden-grass-of-masai-mara.jpg?s=612x612&w=0&k=20&c=g-ioUkP2_Rft_RDzSmV8oLi-dJSQwdA-I_qpR9Eo37Y=" height="200" width="200">
+                <p>Professional portraits that highlight your unique personality and style.</p>
+            </div>
+            <div class="service-item">
+                <h3>Event Photography</h3>
+                <img src=" https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q=" height="200" width="200">
+                <p>Memorable moments from your events, captured with precision and creativity.</p>
+            </div>
+            <div class="service-item">
+                <h3>Product Photography</h3>
+                <img src="https://images.unsplash.com/photo-1530745342582-0795f23ec976?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D " height="200" width="200">
+                <p>High-quality images that showcase your products and boost your brand presence.</p>
+            </div>
+        </div>
+    </section>
+     <!-- Vision Section -->
+     <section id="vision" class="vision">
+        <h2>Our Vision</h2>
+        <p class="vision-desc">At Indu Digital Studio, our vision is to redefine storytelling through the art of photography, creating timeless memories for every moment we capture.</p>
+        <div class="vision-points">
+            <div class="vision-item">
+                <div class="icon">🌍</div>
+                <h3>Global Impact</h3>
+                <p>Bringing people closer together by capturing the shared beauty of our world.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">🎨</div>
+                <h3>Creative Excellence</h3>
+                <p>Continuously innovating to deliver unique, breathtaking visuals.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">❤️</div>
+                <h3>Emotional Connection</h3>
+                <p>Evoking feelings and memories through every photo we take.</p>
+            </div>
+            <div class="vision-item">
+                <div class="icon">📷</div>
+                <h3>Technical Mastery</h3>
+                <p>Combining technical expertise with artistic vision for the perfect shot.</p>
+            </div>
+        </div>
+ <!-- Since Section -->
+ <section class="since-section">
+    <div class="since-header">
+        <h1>Since 10 Years in the Photography Industry</h1>
+        <p>We’ve been crafting breathtaking moments and have received multiple accolades for our exceptional work.</p>
+    </div>
+    <div class="since-content">
+        <div class="achievement">
+            <h2>10+</h2>
+            <p>Years of Experience</p>
+        </div>
+        <div class="achievement">
+            <h2>50+</h2>
+            <p>Prestigious Awards</p>
+        </div>
+        <div class="achievement">
+            <h2>500+</h2>
+            <p>Happy Clients</p>
+        </div>
+    </div>
+    <div class="awards-gallery">
+        <h2>Our Awards</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/955087966/photo/winner-trophy-on-sky-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=1E1R10_4csf0-2sx3Gr6OXDEg-xCGgu8Z1C51hTBSQc=" alt="Award 1">
+                <p>Best Photography Studio 2022</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/2062707084/photo/gold-star-as-a-reward-top-performance-award-winner-certificate-first-place-in-a-computer-game.webp?a=1&b=1&s=612x612&w=0&k=20&c=QV7NzFH2bIU5vpfE7ryw9TJnrbmkfWTEPXOzZ5EzhXQ=" alt="Award 2">
+                <p>Top Wedding Photographer 2021</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/1425117333/photo/badge-star-icon-on-dark-background-3d-render-concept-for-premium.jpg?s=612x612&w=0&k=20&c=ZHHQrMeuKMNvOHvEcJd3-4qKypap3qbzXeLA7AcCnqw=" alt="Award 3">
+                <p>Creative Excellence Award 2020</p>
+            </div>
+            <div class="award-card">
+                <img src=" https://media.istockphoto.com/id/1046383974/photo/hand-holding-winner-trophy.jpg?s=612x612&w=0&k=20&c=hTYlmx6G5KgMtGhLKvRuLQHdO7rC0ZqIOFjs0uFvU9U=" alt="Award 4">
+                <p>Best Nature Photography 2019</p>
+            </div>
+        </div>
+    </div>
+</section>
+    </section>
+     <!-- Testimonials Section -->
+     <section class="testimonials-section">
+        <h1>What Our Clients Say</h1>
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <p>"The team was absolutely amazing! They captured every precious moment of our special day with incredible skill."</p>
+                <h3>– Sarah Johnson</h3>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <p>"Their attention to detail is unmatched. They truly bring creativity to every project they touch."</p>
+                <h3>– Michael Lee</h3>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <p>"From start to finish, the experience was wonderful. Highly recommended for anyone looking for top-notch photography."</p>
+                <h3>– Emily Clark</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h1>Ready to Capture Your Special Moments?</h1>
+        <p>Get in touch with us today to book a session or learn more about our services. Let us help you tell your story through breathtaking photography.</p>
+
+        <a href=" https://www.facebook.com/share/17YGChp9fQ/" target="_blank" class="cta-button"  rel="noopener noreferrer">Contact Us</a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- Bus Container -->
+    <div class="bus-container">
+        <div class="bus">
+            <div class="bus-body"></div>
+            <div class="window window1"></div>
+            <div class="window window2"></div>
+            <div class="window window3"></div>
+            <div class="wheel front-wheel"></div>
+            <div class="wheel back-wheel"></div>
+        </div>
+    </div>
+         <br>
+         <br>
+         <br>
+         <br>
+         <section id="why-choose-us" class="why-choose-us">
+            <h2>Indhu Digital Studio</h2>
+            <div class="reasons-container">
+                <!-- Experienced Photographers -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/camera.png" alt="Expert Team">
+                    </div>
+                    <h3>Experienced Photographers</h3>
+                    <p>Our photographers have over a decade of experience in capturing every detail, from weddings to corporate events.</p>
+                </div>
+                 
+                 <!-- High-Quality Work -->
+            
+             <!-- Advanced Equipment -->
+             <div class="reason-card">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/64/000000/slr-camera.png" alt="Advanced Equipment">
+                </div>
+                <h3>Advanced Equipment</h3>
+                <p>We use state-of-the-art cameras, lenses, and lighting setups to achieve the perfect shot every time.</p>
+            </div>
+             <!-- Award-Winning Work -->
+              <!-- Versatile Expertise -->
+            <div class="reason-card">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/64/000000/image.png" alt="Versatile Expertise">
+                </div>
+                <h3>Versatile Expertise</h3>
+                <p>Whether it’s a wedding, event, or corporate shoot, our team is experienced in all areas of photography.</p>
+            </div>
+                 
+                <!-- Fast Delivery -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="Fast Delivery">
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We ensure timely delivery of your edited photos and albums without compromising on quality.</p>
+                </div>
+                <!-- Client Support -->
+                <div class="reason-card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="Client Support">
+                    </div>
+                    <h3>Unmatched Client Support</h3>
+                    <p>Our dedicated team is available to assist you at every step, from booking to the final delivery.</p>
+                </div>
+            </div>
+        </section>
+        
+ 
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <!-- Call to Action -->
+    <section class="call-to-action">
+        <h2>Sign Up for Our Newsletter</h2>
+        <p>Stay updated with our latest events and offers!</p>
+        
+        <a href="https://www.facebook.com/share/17YGChp9fQ/" target="_blank" rel="noopener noreferrer">
+        <button class="facebook-button">facebook</button>
+        </a>
+    
+        <a href="https://www.instagram.com/indhu_digital_?igsh=MW13bnZjcG5qMW5pYg==" target="_blank" rel="noopener noreferrer"> 
+        <button class="instagram-button"> Instagram</button>
+        </a>
+
+    </section>
+     <!-- FAQ Section -->
+     <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">What services do you offer?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>We offer portrait photography, event coverage, product shoots, and more. Our team ensures professional quality and attention to detail for every project.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I book a session?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>You can book a session by clicking the 'Book Now' button or contacting us directly via email or phone.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do you provide editing services?<span class="arrow">+</span></button>
+            <div class="faq-answer">
+                <p>Yes, all our photography packages include professional editing and retouching to ensure the highest quality.</p>
+            </div>
+        </div>
+    </section>
+    <div id="sub-services">
+    <div class="sub-services">
+        <h1 class="name">Our Sub-Services</h1>
+          <h2>Indhu Digital Studio</h2>
+
+        <ul>
+
+            <li id="Red">Full Day Coverage</li>
+            <li id="green">Engagement Photos</li>
+            <li id="Red">pre-wedding/proposal photography</li>
+            <li id="green">Elopement Photography</li>
+            <li id="Red">Destination Wedding Photography</li>
+            <li id="green">Family Portraits</li>
+            <li id="Red">Maternity Photography</li>
+            <li id="green">New Born Photography</li>
+            <li id="Red">Graduation Photography</li>
+            <li id="green">Festivals & Concerts</li>
+            <li id="Red">Fashion Photography</li>
+            <li id="green">Food Photography</li>
+            <li id="Red">Interior Photography</li>
+            <li id="green">Landscape Photography</li>
+            <li id="Red">Black & White Photography</li>
+            <li id="green">Abstract Photography</li>
+            <li id="Red">Travel Photography</li>
+            <li id="green">Environmental photography</li>
+            <li id="Red">Drone Videography</li>
+            <li id="green">Video Editing Services</li>
+            <li id="Red">Restoration of Old Photos</li>
+            <li id="green">Advanced Photography </li>
+            <li id="Red">Event Videography</li>
+           
+        </ul>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024  Indhu Digital Studio. All Rights Reserved.</p>
+    </footer>
+
+    <div class="confetti-wrapper" id="confettiWrapper"></div>
+    <div class="curtain">
+        <div class="curtain-left"></div>
+        <div class="curtain-right"></div>
+    </div>
+    <br>
+   
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" integrity="sha384-PGQNwlIJdtnrtJP1MhGd7ezfcWnCVIKqKo45vPmdwuTJiDdO+7P6g1E3lRysQIqq" crossorigin="anonymous"></script>
+
+</body>
+</html>
