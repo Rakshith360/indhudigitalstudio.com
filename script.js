@@ -332,23 +332,9 @@ if (confirm('"మీ భద్రత మరియు సురక్షితత
     }
   );
   
-  document.addEventListener("keydown",
-     function (event) {
-        if (event.key == "PrintScreen") {
-            alert("Screenshots are not allowed!");
-                document.body.style.display = 
-                "none";
-            }
-
-        });
-
-
-        document.addEventListener("visibilitychange", function () {
-            if (document.hidden) {
-                alert("ScreenShot prevention triggered!");
-            }
-        });
-    
+ 
+ 
+      
    
 
 
