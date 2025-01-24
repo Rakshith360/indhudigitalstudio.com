@@ -260,45 +260,8 @@ function smoothScroll(target, duration, easingFunction) {
  
 
   
- // JavaScript for handling slider functionality
- const slider = document.querySelector('.slider');
- const prev = document.querySelector('.prev');
- const next = document.querySelector('.next');
  
- let index = 0;
- const totalSlides = document.querySelectorAll('.slider img').length;
-
- // Function to move to the next slide
- function moveToNext() {
-     index++;
-     if (index >= totalSlides) {
-         index = 0; // Reset to the first slide if we reach the end
-     }
-     updateSliderPosition();
- }
-
- // Function to move to the previous slide
- function moveToPrev() {
-     index--;
-     if (index < 0) {
-         index = totalSlides - 1; // Go to the last slide if we're at the first one
-     }
-     updateSliderPosition();
- }
-
- // Update slider position based on the current index
- function updateSliderPosition() {
-     const newTransformValue = -index * 100; // Move by 100% of the width of one image
-     slider.style.transform = `translateX(${newTransformValue}%)`;
- }
-
- // Event listeners for next and previous buttons
- next.addEventListener('click', moveToNext);
- prev.addEventListener('click', moveToPrev);
-
- // Optional: Automatic sliding every 3 seconds
- setInterval(moveToNext, 15000);
-
+ 
  
 
 
@@ -331,6 +294,12 @@ if (confirm('"మీ భద్రత మరియు సురక్షితత
     
     }
   );
+  
+ 
+
+  
+  document.cookie = "sessionToken=abc123; Secure; HttpOnly; SameSite=Strict";
+
   
  
  
