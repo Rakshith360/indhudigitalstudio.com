@@ -7,6 +7,8 @@ body {
     background: #f9f9f9;
       overflow-x: hidden;
  
+   
+ 
 }
 header {
     background-color:black;
@@ -14,26 +16,66 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
+    margin-top:0px;
+    
    
 }
+ 
+ /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    position: relative;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    position: fixed;
+    height:100px;
+    top: 0;
+    width: 100%;
+    z-index: 1000000000;
+    transition: background 0.3s ease-in-out;
+ 
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 1px;
+ 
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-/* Menu Toggle Button */
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+   background-color:orange;
+}
+
+ /* Menu Toggle Button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -52,7 +94,6 @@ header {
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
-
 /* Animated Toggle Transform */
 .menu-toggle.open .line:nth-child(1) {
     transform: rotate(45deg) translateY(7px);
@@ -66,63 +107,40 @@ header {
     transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Nav Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    background-color: #ff5722;
-    color: #fff;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
 
     .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #222;
         flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.95);
-        height: 100%;
-        width: 250px;
-        padding-top: 80px;
-        align-items: center;
-        transform: translateX(100%);
-        opacity: 0;
+        text-align: center;
+        display: none;
+        padding: 15px 0;
     }
 
     .nav-links.active {
-        transform: translateX(0);
-        opacity: 1;
+        display: flex;
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 10px 0;
     }
 }
-/* Hero Section */
-.hero {
-    text-align: center;
-    
-     color:black;
-    padding: 100px 20px;
+
+#hado{
+    font-size:xx-large;
+    font-weight:bolder;
+    color:orange;
+}
+.hero p{
+    color:orange;
 }
 
 /* Gallery Section */
@@ -168,6 +186,12 @@ header {
 .about h2 {
     margin-bottom: 20px;
 }
+.about h {
+    font-size:25px;
+    color:orangered;
+    text-align:center;
+}
+ 
 
 /* Contact Section */
 .contact {
@@ -579,6 +603,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
 .bg-video {
@@ -680,7 +705,7 @@ header {
 
     .main-content p {
         font-size: 1rem;
-    }
+     }
 }
 
 
@@ -1006,7 +1031,7 @@ header {
     }
 
     .bus-body {
-        width: 210px;
+        width: 230px;
         height: 70px;
     }
 
@@ -1140,12 +1165,34 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation:color;
+    animation-timing-function: ease-in-out;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-delay:0s;
+    
+
 }
+ /* Define the keyframes */
+@keyframes color {
+    0% {
+      background-color: #e6840c;  
+    }
+    50% {
+      background-color: #c9ff06;  
+    }
+    100% {
+      background-color: #00ff6e;  
+    }
+  }
+  
+ 
 
 .award-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+ 
 
 .award-card img {
     width: 80px;
@@ -1534,9 +1581,9 @@ footer p {
 
 /* Top Sticky Buttons */
 .top-sticky {
-    position: sticky;
+    
     top: 0;
-    background: rgba(255, 255, 255, 0.9);
+    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
     justify-content: left;
@@ -1696,16 +1743,18 @@ footer p {
     animation-iteration-count:infinite;
     
 }
+ 
 @keyframes myScale{
     50%{transform:scale(0.5,0.5);}
 }
 
-#Red{
-    color:rgb(249, 82, 82);
-   
-    
-
-}
+ #Red{
+    color:darkblue;
+ }
+ #green{
+   color: darkblue;
+ }
+ 
 #Red:hover{
     color:orange;
     font-size:xx-large;
@@ -1714,11 +1763,9 @@ footer p {
     
    
 }
-#green{
-    color:rgb(41, 137, 41);
-}
+ 
 #green:hover{
-    color:blue;
+    color:darkred;
     font-size:x-large;
     font-weight:bold;
 
@@ -1747,5 +1794,48 @@ blockquote{
     z-index: 9999;
 }
 
+
+ /* Hero Section with Video */
+.video-class {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-shot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.sub-services {
+    position: relative;
+   
+    padding: 20px;
+    
+    z-index: 1;
+}
+
+ .in h1 {
+    text-align:center;
+    color:orange;
+    height:20px;
+     margin-bottom:12px;
+
+ }
+ .note h1 {
+    text-align:center;
+    color:black;
+    font:33px;
+ }
 
  

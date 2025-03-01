@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clickSound.addEventListener('error', () => {
         console.error("Audio file failed to load.");
     });
+ 
  // Trigger confetti when the page loads
  window.onload = function () {
     const duration = 5000; // Confetti duration in milliseconds
@@ -165,7 +166,7 @@ function createConfetti() {
         confetti.style.backgroundColor = randomColor();
 
         wrapper.appendChild(confetti);
-
+ 
         // Remove confetti after animation
         setTimeout(() => {
             wrapper.removeChild(confetti);
@@ -260,9 +261,7 @@ function smoothScroll(target, duration, easingFunction) {
  
 
   
- 
- 
- 
+  
 
 
 
@@ -301,11 +300,27 @@ if (confirm('"మీ భద్రత మరియు సురక్షితత
   document.cookie = "sessionToken=abc123; Secure; HttpOnly; SameSite=Strict";
 
   
+  const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
+  const userEmail = document.getElementById('email').value;
+  if (!isValidEmail(userEmail)) {
+       
+  }
+  
  
+    
+  
+  let debounceTimeout;
+  document.getElementById('submit').addEventListener('click', function() {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      // Send the form request
+    }, 500);
+  });
+  
  
-      
-   
 
+// Instead, use:
+alert("An error occurred, please try again later.");
 
  
  
