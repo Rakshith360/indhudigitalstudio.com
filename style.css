@@ -108,7 +108,7 @@ header {
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
     .menu-toggle {
         display: flex;
     }
@@ -304,7 +304,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .nav-bar ul {
         flex-direction: column;
         text-align: center;
@@ -477,7 +477,7 @@ header {
 
   
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .slider {
         height: 300px;
     }
@@ -698,7 +698,7 @@ header {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .main-content h1 {
         font-size: 2rem;
     }
@@ -782,7 +782,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .flower-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -1024,7 +1024,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .bus {
         width: 250px;
         height: 125px;
@@ -1207,7 +1207,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .since-header h1 {
         font-size: 2rem;
     }
@@ -1379,7 +1379,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .testimonials-section h1,
     .cta-section h1 {
         font-size: 2rem;
@@ -1537,7 +1537,7 @@ footer p {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .hero h2 {
         font-size: 2.2rem;
     }
@@ -1613,7 +1613,7 @@ footer p {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .sticky-btn {
         font-size: 0.9rem;
         padding: 10px 15px;
