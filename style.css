@@ -110,7 +110,7 @@ header {
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 580px) {
     .menu-toggle {
         display: flex;
     }
@@ -306,7 +306,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .nav-bar ul {
         flex-direction: column;
         text-align: center;
@@ -479,7 +479,7 @@ header {
 
   
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .slider {
         height: 300px;
     }
@@ -712,7 +712,7 @@ header {
 
 
 /* Media Queries for Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .faq h2 {
         font-size: 1.8rem;
     }
@@ -784,7 +784,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .flower-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -868,7 +868,7 @@ header {
 }
 
 /* Responsiveness */
-    @media (max-width: 600px) {
+    @media (max-width: 580px) {
   .petal {
     width: 80px;
     height: 80px;
@@ -924,7 +924,7 @@ header {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .sun {
         width: 90px;
         height: 90px;
@@ -1026,7 +1026,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .bus {
         width: 250px;
         height: 125px;
@@ -1209,7 +1209,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .since-header h1 {
         font-size: 2rem;
     }
@@ -1381,7 +1381,7 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .testimonials-section h1,
     .cta-section h1 {
         font-size: 2rem;
@@ -1539,7 +1539,7 @@ footer p {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .hero h2 {
         font-size: 2.2rem;
     }
@@ -1615,7 +1615,7 @@ footer p {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     .sticky-btn {
         font-size: 0.9rem;
         padding: 10px 15px;
