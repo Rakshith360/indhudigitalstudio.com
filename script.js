@@ -263,7 +263,7 @@ function smoothScroll(target, duration, easingFunction) {
   
   
 
-
+// the bottom lines all are for security purpose and for secure website 
 
 
 // clear the cache storage and data from user after clicking ok 
